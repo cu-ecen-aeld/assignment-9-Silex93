@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_LDD
+	bool "ldd"
+	help
+	  Includes the kernelvmodules scull and misc-modules

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Description: Startup script for aesdsocket daemon
+
+
+case "$1" in
+    start)
+		echo "Loading scull module"
+        scull_load
+        echo "Loading misc-module"
+		module_load faulty
+		echo "Loading hello"
+		modprobe hello
+        ;;
+    stop)
+		echo "Unloading hello"
+        rmmod hello
+		echo "Unloading misc-modules"
+		module_unload faulty
+		echo "Unloading scull"
+        scull_unload
+        
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+		exit 1
+        ;;
+esac
+
