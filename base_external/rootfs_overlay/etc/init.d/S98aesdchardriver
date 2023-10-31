@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Description: Startup script for aesdsocket daemon
+
+
+case "$1" in
+    start)
+      echo "Attempting to modprobe to install the aesdchar module"
+      cd "/etc/aesd-char-driver/"
+      ./aesdchar_load
+        ;;
+    stop)
+     echo "Attempting to remove the aesdchar module"
+     cd "/etc/aesd-char-driver/"
+     ./aesdchar_unload
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+		exit 1
+        ;;
+esac
+
