@@ -6,7 +6,7 @@
 ##############################################################
 
 
-AESD_CHAR_VERSION = 'a4be08b4d13428d18af53033fd794630777c3bd2'
+AESD_CHAR_VERSION = 'be6231965c3460ded5c9603399c79fdbb491f15a'
 
 AESD_CHAR_SITE = 'git@github.com:cu-ecen-aeld/assignments-3-and-later-Silex93.git'
 AESD_CHAR_SITE_METHOD = git
